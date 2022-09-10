@@ -1,0 +1,93 @@
+:root{
+  --insight-bg-color:#c3e8f3;
+  --fact-bg-color:#c8f9c8;
+  --note-bg-color:#f4f4cb;
+
+  --box-text-color:#d32222;
+}
+h1, h2, h3{
+  text-align: center;
+}
+
+hr{
+  width:80%; 
+  border: 1px solid var(--border-color);
+  color: var(--border-color);
+  size: 0px;
+  margin: 0 auto;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* align-items: center; */
+}
+
+.chess-intro-wrapper h4{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.data-wrapper{
+
+}
+
+.analysis-wrapper h2{
+  display: block;
+  margin: 0 auto;
+  background-color: var(--preview-bg);
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.analysis-part-wrapper{
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.charts-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  justify-content: center;
+  gap: 10px;
+}
+
+.recommendation-wrapper h2{
+  display: block;
+  margin: 0 auto;
+  background-color: var(--preview-bg);
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+
+.insight{
+  background-color: var(--insight-bg-color);
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.fact{
+  background-color: var(--fact-bg-color);
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.note{
+  background-color: var(--note-bg-color);
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.insight p, .insight h4, .fact p, .fact h4, .note p, .note h4, .note li{
+  color:var(--box-text-color);
+  margin: 0;
+  padding-top: 10px;
+}

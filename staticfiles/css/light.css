@@ -1,0 +1,16 @@
+:root{
+  --main-color: #e1e1e1;
+  --secondary-color: #fff;
+  
+  --border-color: #c1c1c1;
+
+  --main-text:black;
+  --secondary-text: #4b5156;
+
+  --theme-dot-border:#24292e;
+
+  --preview-bg:rgb(251, 249, 243, 0.8);
+  --resume-hover: rgba(230, 230, 230, 0.9);
+
+  --button-color:black;
+}

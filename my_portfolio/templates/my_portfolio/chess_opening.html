@@ -1,0 +1,341 @@
+{% extends "my_portfolio/base.html" %}
+{% load static %}
+
+{% block title %}Chess Openings Analysis{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/chess_opening.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="title-wrapper">
+  <h1 style="font-size:60px">♔ Chess Openings Analysis ♕</h1>
+</div>
+
+<section class="s2" style="border-top: 0;">
+  <div class="main-container">
+    <h1>1. Intro </h1>
+    <div class="chess-intro-wrapper">
+      <h4>Objectives</h4>
+      <p>As a chess enthusiast, I am always interested in finding high-score openings.</p>
+      <p>In this analysis, I will look at win rates of different openings at all levels and intermediate levels in rapid time format, finding the highest win rate openings among white and black colours, and see their popularity in association.</p>
+      <p>At the end, I will recommend some openings based on the analysis results.</p>
+
+      <h4>Kaggle Notebook</h4>
+      <p>My notebook for this analysis on Kaggle can be founded here: <a target="__blank" href="https://www.kaggle.com/code/austinnguyen00/chess-openings-analysis">Chess_Openings_Analysis</a></p>
+
+      <h4>Data Source</h4>
+      <p>I use chess data from available dataset sources on Kaggle. You can look and download the dataset at: <a target="_blank" href="https://www.kaggle.com/datasets/datasnaek/chess">Chess Game Dataset (Lichess)</a> </p>
+
+      <h4>Github Repo</h4>
+    </div> 
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>2. Data Pre-Processing </h1>
+    <div class="data-wrapper">
+      <p>The data is already cleaned with no significant data missing, so there is not much to do for data cleansing</p>
+      <p>I use 5 out of 16 attributes in the original data:</p>
+        <ul>
+          <li><b>1. winner</b> - categorical data with 3 values: white, black, draw</li>
+          <li><b>2. increment code</b> - categorical data of game time control</li>
+          <li><b>3. white rating</b> - rating of white player</li>
+          <li><b>4. black rating</b> - rating of black player</li>
+          <li><b>5. opening name</b></li>
+        </ul>
+      <p>I also add in 2 fields into the dataset for analysis purposes:</p>
+        <ul>
+          <li><b>6. first move</b> - string format of first move of the game</li>
+          <li><b>7. appearances</b>- how many games the openings are included in the dataset</li>
+        </ul>
+      <p>For details of my data pre-processing code, please visit my <a target="__blank" href="https://www.kaggle.com/code/austinnguyen00/chess-openings-analysis">Kaggle notebook</a></p>
+      
+      <div class="note">
+        <h4 style="font-weight:bold">📢 Notes</h4>
+        <p>In the following sections, we will only focus on rapid games with the time control of <b>
+            <ul>
+                <li>'10+0'</li> 
+                <li>'15+0'</li> 
+                <li>'15+15'</li>
+            </ul>
+         </b> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>3. Rapid Game Analysis</h1>
+
+    <div class="analysis-wrapper">
+      <h2>General Analysis</h2>
+
+      <div class="analysis-part-wrapper">
+        <p>First, let's look at the win rate in all rapid chess games </p>
+        <img class="chart" src="{% static 'images/charts/pie_general_win_rate.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. White win rate at all levels in rapid time format is around 50% and is nearly 4% higher than the black win rate
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I will continue by examining how common openings are played in all rapid games</p>
+        <div class="charts-wrapper">
+          <img class="chart" src="{% static 'images/charts/violin_openings_by_appearances.png' %}">
+          <img class="chart" src="{% static 'images/charts/boxen_openings_by_appearances.png' %}">    
+          <img class="chart" src="{% static 'images/charts/strip_openings_by_appearances.png' %}">
+        </div>
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Three plots above illustrate that most openings only appear from 1 to 15 games in the dataset.</p>
+          <p>2. The average number of games that an opening is included is around 10</p>
+          <p>3. From the Boxen plot and Strip plot, we see that there are a few openings that are played in more than 125 games in this dataset.
+        </div>
+        <div class="fact">
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>Many openings have their variations as a separate opening in this dataset, explaining why there are more than 1000 openings in total, but most have only a few games</p>
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I wonder what the most common openings and their performance are, so let's graph it</p>
+        <img class="chart" src="{% static 'images/charts/top_10_most_played_all.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Sicilian Defense is the most common opening and is a good choice for black with a high win rate at 54%</p>
+          <p>2. The most common and successful opening for white is the Scotch Game, with a 58% white win rate 
+        </div>
+        <div class="fact">
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Sicilian Defense is a black response with 1.c5 to 1.e4 by white
+          <p>2. Scotch Game has 5-ply, starting with 1.e4 e5 2.Nf3 Nc6 3.d4</p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="analysis-wrapper">
+      <h2>White Openings at All Level</h2>
+      <div class="note">
+        <h4 style="font-weight:bold">📢 Notes</h4>
+        <p>In the following parts, I will focus only on openings with <b>at least 20 appearances</b> in all rapid games</p>
+        <p>This is to ensure that the win rate percentage is not skewed </p>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I will start with a scatter plot to look at the common openings by their win rate for the white side in rapid games </p>
+        <img class="chart" src="{% static 'images/charts/scatter_appearances_by_white_win_rate_all.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. White win rate of most openings with at least 25 appearances are from around 38% to 62%</p>
+          <p>2. The most played opening has only around 42% win rate for white, which is the Sicilian Defense opening at we see above</p>
+          <p>3. There are a few openings that score more than 70% but appear only in less than 50 games
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>Let's examine in more detail the top 10 scoring openings for white in rapid games</p>
+        <img class="chart" src="{% static 'images/charts/top_10_white_all.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. The most successful opening for white is the Zukertort Opening: Queen's Gambit Invitation with an 80% win rate, but this is not a common one</p>
+          <p>2. Two noticeable openings in this chart are the Bishop's Opening: Berlin Defense and Queen's Gambit Refused: Marshall Defense, which both scores around 70% with more than 50 games.</p>
+        </div>
+        <div class=fact>
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Most openings in this list are variations derived from their main openings</p>
+          <p>2. There are only two main openings in this list which are Elephant Gambit and Ruy Lopez</p>
+        </div>
+      </div>
+
+    <div class="analysis-wrapper">
+      <h2>Black Openings at All Level</h2>
+
+      <div class="analysis-part-wrapper">
+        <p>I will again start with a scatter plot to see how black performs in different openings by its popularity</p>
+        <img class="chart" src="{% static 'images/charts/scatter_appearances_by_black_win_rate_all.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Black win rate of most openings with at least 25 appearances is from around 35% to 56%</p>
+          <p>2. The most played opening has a high score for black with around 54% win rate</p>
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>As above, I will dive into the top 10 highest win rate openings for black</p>
+        <img class="chart" src="{% static 'images/charts/top_10_black_all.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Black score very well in the King's Pawn Game with an 80% win rate</p>
+          <p>2. Van't Kruijis Opening is the most common opening, with 140 games, scoring around 65% for black.</p>
+        </div>
+        <div class=fact>
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Most openings in this list are variations derived from their main openings</p>
+          <p>2. There are only two main openings in this list which are Elephant Gambit and Ruy Lopez</p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>4. Intermediate Rapid Game Analysis</h1>
+    <div class="note">
+      <h4 style="font-weight:bold">📢 Notes</h4>
+      <p>In the following parts of this notebook, we will focus on <b>intermediate games (both white and black ratings are higher than 1500)</b> in the dataset</p>
+      <p>We still keep the <b>rapid time format</b> and <b>20-games condition</b> in our analysis</p>
+    </div>
+    
+    <div class="analysis-wrapper">
+      <h2>Intermediate Win Rate</h2>
+
+      <div class="analysis-part-wrapper">
+        <p>First, let's graph a pie chart to see the win rate at the intermediate level for rapid chess </p>
+        <img class="chart" src="{% static 'images/charts/pie_intermediate_win_rate.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. White win rate in rapid time format at the Intermediate level is around 49%, 1% lower than all levels.
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I will look at the distribution of popularity of openings with more than 20 games at the intermediate level</p>
+        <div class="charts-wrapper">
+          <img class="chart" src="{% static 'images/charts/hist_openings_by_appearances_intermediate.png' %}">
+          <img class="chart" src="{% static 'images/charts/violin_openings_by_appearances_intermediate.png' %}">    
+        </div>
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. The average appearances of openings with more than 20 games at the Intermediate level are around 60.</p>
+          <p>2. There are only a few openings with more than 150 games.
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>Let's also look at the score of these openings</p>
+        <img class="chart" src="{% static 'images/charts/swarm_win_rate_intermediate.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>For different openings: </p>
+          <p>1. White win rate stacks around 45% to 65%, with one exception opening at 80%.</p>
+          <p>2. Black win rates are distributed evenly, from 35% to 68%.
+          <p>3. Draw result is becoming more common at this level, with lots of points at 5% to 8% 
+        </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I will end this section with a look at the top most common openings at the Intermediate level and their win rate</p>
+        <img class="chart" src="{% static 'images/charts/top_10_most_played_intermediate.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. At the Intermediate level, Sicilian Defense is still the most common opening with a high win rate for black at 55%</p>
+          <p>2. White scores quite well against the Caro-Kann Defense with a 60% win rate, and a variation in Italian Game - Italian Game: Anti-Fried Liver Defense with a 58% win rate
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="analysis-wrapper">
+      <h2>White Openings at Intermediate Level</h2>
+      
+      <div class="analysis-part-wrapper">
+        <p>I will continue with a bar chart of the top 10 score openings for white at the intermediate level</p>
+        <img class="chart" src="{% static 'images/charts/top_10_white_intermediate.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. White win rate in Queen's Gambit Refused: Marshall Defense is highest at around 80%, more than 10% than the rest in the list</p>
+          <p>2. Queen's Gambit Declined is the most common opening in the top 10 with around 45 games in the dataset with a high win rate of 65%.</p>
+        </div>
+        <div class=fact>
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Queen's Gambit Declined and Italian Game are two very popular openings in chess games, but for different first moves, which are d4 and e4, respectively</p>
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <p>I also want to compare these openings' performance to all rating levels to see how good they are in all rating ladders </p>
+        <img class="chart" src="{% static 'images/charts/top_10_white_intermediate_compare.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Most openings in this top 10 list keep their same popularity among different levels, except for Four Knights Game: Italian Variation</p>
+          <p>2. Although Queen's Gambit Declined win rate is not much different compared to all rating levels, it is not the most popular one anymore.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="analysis-wrapper">
+      <h2>Black Openings at Intermediate Level</h2>
+      <p>I will look at black performance at the intermediate level based on two different first most common moves from whites, 1.e4 and 1.d4</p>
+      
+      <div class="analysis-part-wrapper">
+        <h3>Black Openings at Intermediate Level Against e4</h3>
+        <p>First, let's look at the top openings score best for black against e4</p>
+        <img class="chart" src="{% static 'images/charts/top_10_black_intermediate_e4.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Most openings (5 in total) in this list are variations of Sicilian Defense </p>
+          <p>2. Sicilian Defense: Bowdler Attack has the highest win rate with 70% and a high amount of games with 60 games</p>
+        </div>
+        <div class=fact>
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Sicilian Defense is one of the most common and high-score openings against 1.e4 by white in many chess databases</p>
+        </div>
+      </div>
+
+      <div class="analysis-part-wrapper">
+        <h3>Black Openings at Intermediate Level Against d4</h3>
+        <p>Now let's see how black performs against d4 with top 10 win rate openings</p>
+        <img class="chart" src="{% static 'images/charts/top_10_black_intermediate_d4.png' %}">
+        <div class="insight">
+          <h4 style="font-weight:bold">💡 Insights</h4>
+          <p>1. Intermediate players do not score very well when they face 1.d4, with only six openings has a win rate of higher than 50%</p>
+          <p>2. The best overall opening is the Indian game, with a high number of games and a decent win rate at 55%</p>
+        </div>
+        <div class=fact>
+          <h4 style="font-weight:bold">❕ Facts</h4>
+          <p>1. Indian game is black response 1.Nf6 to 1.d4 by white, leading to many other main openings from this position</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>5. Openings Recommendation</h1>
+    <p>I will categorize this based on the last move in the opening is played by white or black</p>
+    <p>If the last move in the opening tree is white, then I will put it in the white recommendation section, and the same for black</p>
+
+    <div class="recommendation-wrapper">
+      <h2>Recommendation for White</h2>
+      <p>1. Scotch Game (1.e4 e5 2.Nf3 Nc6 3.d4) is a fairly decent opening for white at all levels that score well </p>
+      <p>2. As a white player, you should not play Van't Kruijs opening, which is starting the game with the move 1.e3, as this score is significantly poor for white.</p>
+      <p>3. At the Intermediate level, if you play against the French Defense (1.e4 e6 2.d4 d5), the Exchange variation is a good variation that you can play as white with 3.exd5</p>
+      <p>4. If facing the Sicilian Defense, two variations that white should avoid are the Bowdler Attack(1.e4 c5 2.Bc4) and Alapin Variation(1.e4 c5 2.c3). Both do not score well for white</p>
+    </div>
+
+    <div class="recommendation-wrapper">
+      <h2>Recommendation for Black</h2>
+      <p>1. Sicilian Defense is the best weapon black against 1.e4 at all levels </p>
+      <p>2. Most of the Sicilian setups are feasible choices, but the French Variation(1.e4 c5 2.Nf3 2.e6) in this opening score quite high at both low and high level</p>
+      <p>3. Against 1.d4, black can play the Indian game(1.Nf6) which is quite popular at the intermediate level with a decent win rate for black as well </p>
+    </div>
+
+  </div>
+</section>
+
+{% endblock content %}

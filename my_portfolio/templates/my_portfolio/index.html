@@ -1,0 +1,192 @@
+{% extends "my_portfolio/base.html" %}
+<!-- {% load static %} -->
+
+{% block title %}Austin Nguyen{% endblock %}
+
+{% block content %}
+<section class="s1">
+  <div class="main-container reveal">
+
+      <div class="intro-wrapper">
+        <div class="left-column">
+          <div class="greeting-wrapper">
+            <h1>Hi. I'm Austin!</h1>
+          </div>
+          
+          <div class="preview-wrapper">
+            <div id="preview">
+              <h3>Who Am I</h3>
+              <p>I am a graduate student from The University of Western Australia.</p>
+              <p>I love coding, analyzing data, and hacking the planet.</p>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="right-column">
+          <img id="profile_pic" src="{% static 'images/austin.jpg' %}">
+
+          <h5 style="text-align: center; line-height: 0; padding-top: 20px;">Choose Theme Mode</h5>
+          <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <!-- <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple" id="purple-mode" class="theme-dot"></div> -->
+          </div>
+
+          <p id="settings-note">* Theme settings will be save for next visit</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="about" class="s2">
+  <div class="main-container reveal">
+    <div class="about-wrapper">
+      <h1>ABOUT ME</h1>
+      
+      <p>I majored in Computer Science and completed my course in 2021. I spent most of my time in my sophomore year and the first half of 2022 learning, practising my pen-testing skills and competing in hacking events.</p>
+
+      <p>However, my passion for Machine Learning and its unlimited potential has driven me to a new field of Data Science in the middle of 2022. I enjoy all the things that I have learned ever since and wish to improve my skills further.</p>
+
+      <p>At the time, I am looking for opportunities to work in the Data Science field as a Data Analyst/Data Engineer to gain valuable experience.</p>
+    
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="s1">
+  <div class="main-container reveal">
+    <h1>TOP SKILLS</h1>
+
+    <div id="data-skills">
+      <h3>Data Skills</h3>
+      
+      <div class="data-skills-wrapper">
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/python.png' %}">
+          <p>Python</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/excel.png' %}">
+          <p>Excel</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/sql.png' %}">
+          <p>SQL</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/numpy.png' %}">
+          <p>Numpy</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/pandas.png' %}">
+          <p>Pandas</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/matplotlib.png' %}">
+          <p>Matplotlib</p>
+        </div>
+        <div class="data-skill-wrapper">
+          <img src="{% static 'images/icons/seaborn.png' %}">
+          <p>Seaborn</p>
+        </div>
+      </div>
+
+      <br>
+      <a class="resume" target="_blank" href="{% static 'resume.pdf' %}">Download My Resume</a>
+
+    </div>
+</section>
+
+<section class="s2">
+  <div class="main-container reveal">
+    
+    <div id="pentest-skills">
+      <h3>Pentesting Skills</h3>
+
+      <div class="pentest-skills-wrapper">
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/linux.png' %}">
+          <p>Linux</p>
+        </div>
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/windows.png' %}">
+          <p>Windows</p>
+        </div>
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/web.png' %}">
+          <p>Web Pentesting</p>
+        </div>
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/network.png' %}">
+          <p>Network Security</p>
+        </div>
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/active-directory.png' %}">
+          <p>Active Directory</p>
+        </div>
+        <div class="pentest-skill-wrapper">
+          <img src="{% static 'images/icons/privesc.png' %}">
+          <p>Privilege Escalation</p>
+        </div>
+      </div>
+
+      <hr style="height:1px;border-width:0;background-color:#164D56">
+
+      <div class="pentest-badges-wrapper">
+        <div class="pentest-badge">
+          <script target="_blank" src="https://www.hackthebox.eu/badge/454589"></script>
+          <p>Hack The Box Badge</p>
+        </div>
+        <div class="pentest-badge">
+          <script src="https://tryhackme.com/badge/267973"></script>
+          <p>Try Hack Me Badge</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</section>
+      
+<section id="portfolio" class="s1">
+  <div class="main-container reveal">
+    <h1>PORTFOLIO</h1>
+    
+    <div class="portfolio-wrapper">
+
+      <div class="portfolio">
+        <img class="thumbnail" src="{% static 'images/chess.jpg' %}">
+        <div class="portfolio-preview">
+          <h6 class="portfolio-title">Chess Openings Analysis</h6>
+          <p class="portfolio-intro">Examine win rates of different openings at different levels in rapid time format, finding the highest win rate openings, and see their popularity in association</p>
+          <a target="_blank" href="chess_opening.html">Read more</a>
+        </div>
+      </div>
+
+      <!-- <div class="portfolio">
+        <img class="thumbnail" src="{% static 'images/chess.jpg' %}">
+        <div class="portfolio-preview">
+          <h6 class="portfolio-title">portfolio Title</h6>
+          <p class="portfolio-intro">This is a sentence.</p>
+          <a target="_blank" href="portfolio.html">Read more</a>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <img class="thumbnail" src="{% static 'images/chess.jpg' %}">
+        <div class="portfolio-preview">
+          <h6 class="portfolio-title">portfolio Title</h6>
+          <p class="portfolio-intro">This is a sentence.</p>
+          <a href="">Read more</a>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
