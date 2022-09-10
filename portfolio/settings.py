@@ -121,6 +121,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles")
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -130,6 +132,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 DEFAULT_FROM_EMAIL = "ndkhiem3010@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-
-import django_heroku
-django_heroku.settings(locals())
