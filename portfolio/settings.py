@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-law0gp4ffyi2r#o^(g81e%+y@s%21ny#5-kgto_09j)y^(f(b^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['austinnguyen-portfolio.herokuapp.com', '.localhost', '127.0.0.1']
 
@@ -140,8 +141,6 @@ STATICFILES_DIRS = [
 # Default email
 DEFAULT_FROM_EMAIL = "ndkhiem3010@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-# DEBUG = False
 
 # Django Heroku settings
 # django_heroku.settings(globals())
