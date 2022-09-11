@@ -20,19 +20,19 @@ for (var i = 0; themeDots.length > i; i++) {
 // Function to set page theme
 function setTheme(mode) {
   if (mode == 'light') {
-    document.getElementById('theme-style').href = '/staticfiles/css/light.css';
+    document.getElementById('theme-style').href = '/static/css/light.css';
   }
 
   if (mode == 'blue') {
-    document.getElementById('theme-style').href = '/staticfiles/css/blue.css';
+    document.getElementById('theme-style').href = '/static/css/blue.css';
   }
 
   if (mode == 'green') {
-    document.getElementById('theme-style').href = '/staticfiles/css/green.css';
+    document.getElementById('theme-style').href = '/static/css/green.css';
   }
 
   if (mode == 'purple') {
-    document.getElementById('theme-style').href = '/staticfiles/css/purple.css';
+    document.getElementById('theme-style').href = '/static/css/purple.css';
   }
 
   localStorage.setItem('theme', mode);

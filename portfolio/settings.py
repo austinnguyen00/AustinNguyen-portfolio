@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-law0gp4ffyi2r#o^(g81e%+y@s%21ny#5-kgto_09j)y^(f(b^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*', "https://austinnguyen-portfolio.herokuapp.com/", "http://127.0.0.1:8000/"]
+ALLOWED_HOSTS = ['austinnguyen-portfolio.herokuapp.com/', '.localhost', '127.0.0.1']
 
 
 # Application definition
@@ -119,27 +119,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-STATIC_URL = "/staticfiles/"
-MEDIA_URL = "images/"
+STATIC_URL = "/static/"
+MEDIA_URL = "/images/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles")
+    os.path.join(BASE_DIR, "static")
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Default email
 DEFAULT_FROM_EMAIL = "ndkhiem3010@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-DEBUG = False
+# DEBUG = False
 
 # Django Heroku settings
-django_heroku.settings(locals())
+# django_heroku.settings(globals())
