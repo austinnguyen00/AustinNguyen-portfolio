@@ -1,19 +1,18 @@
 :root{
-  --main-color: #e1e1e1;
-  --secondary-color: #fff;
-  
-  --border-color: #c1c1c1;
+	--main-color:#111b26;
+	--secondary-color:#15283a;
 
-  --main-text:black;
-  --secondary-text: #4b5156;
+	--border-color:#164D56;
 
-  --theme-dot-border:#24292e;
+	--main-text:#fff;
+	--secondary-text:#eeeeee;
 
-  --preview-bg:rgb(251, 249, 243, 0.8);
-  --resume-hover: rgba(230, 230, 230, 0.9);
+	--theme-dot-border:#FFF;
 
-  --button-color:black;
-  --link-color:rgb(53, 153, 193);
+	--preview-bg:rgb(25, 39, 52, 0.8);
+  --resume-hover: #2c4c6a;
+
+	--button-color:#196ad4bb;
 }
 
 html, body{

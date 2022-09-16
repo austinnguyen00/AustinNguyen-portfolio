@@ -142,5 +142,6 @@ STATICFILES_DIRS = [
 DEFAULT_FROM_EMAIL = "ndkhiem3010@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-# Django Heroku settings
-# django_heroku.settings(globals())
+# Https
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
