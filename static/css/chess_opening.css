@@ -25,6 +25,10 @@ img{
   /* align-items: center; */
 }
 
+.main-container{
+  width: 65%;
+}
+
 .chess-intro-wrapper h4{
   margin: 0px;
   padding-top: 10px;

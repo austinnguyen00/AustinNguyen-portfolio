@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-law0gp4ffyi2r#o^(g81e%+y@s%21ny#5-kgto_09j)y^(f(b^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -142,11 +142,11 @@ DEFAULT_FROM_EMAIL = "ndkhiem3010@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Http
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'http')
-# SECURE_SSL_REDIRECT = False
-# SESSION_COOKIE_SECURE = False
-# SECURE_SSL_REDIRECT = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'http')
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 
 # Https
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True

@@ -2,7 +2,7 @@
 let theme = localStorage.getItem('theme');
 
 if (theme == null) {
-  setTheme('blue');
+  setTheme('main');
 } else {
   setTheme(theme);
 }
