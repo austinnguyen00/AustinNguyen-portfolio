@@ -25,10 +25,15 @@ p, li, span, label, input, text, .main-container a, textarea{
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif
 }
 
-h1, h2, h3{
+h1{
   text-align: center;
+  margin: 0;
+  padding-top: 20px;
 }
 
+h3{
+  padding-top: 30px;
+}
 
 hr{
   width:80%; 
@@ -43,8 +48,7 @@ img{
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* align-items: center; */
-  width: 100%;
+  width: 80%;
 }
 
 .pie{
@@ -60,29 +64,17 @@ img{
   padding-top: 10px;
 }
 
-.data-wrapper{
-
-}
-
 .analysis-wrapper h2{
-  display: block;
-  margin: 0 auto;
-  background-color: var(--preview-bg);
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-  margin-top: 40px;
+  margin: 0
 }
 
 .analysis-part-wrapper{
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .charts-wrapper{
   display: grid;
-  grid-template-columns: repeat(auto-fit);
+  grid-template-columns: repeat(auto-fit, 1fr);
   justify-content: center;
   gap: 10px;
 }

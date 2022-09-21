@@ -13,3 +13,6 @@ def post(request):
 
 def chess_opening(request):
   return render(request=request, template_name='my_portfolio/chess_opening.html')
+
+def data_skills(request):
+  return render(request=request, template_name='my_portfolio/data_skills.html')

@@ -1,0 +1,152 @@
+{% extends "my_portfolio/base.html" %}
+{% load static %}
+
+{% block title %}In-Demand Data Skills{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/data_skills.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="title-wrapper">
+  <h1 style="font-size:60px">In-demand Data Skills</h1>
+</div>
+
+<section class="s2" style="border-top: 0;">
+  <div class="main-container">
+    <h1>1. Intro </h1>
+    <div class="chess-intro-wrapper">
+      <h4>Objectives</h4>
+      <p>As a graduate student seeking more career opportunities in Data Science, I would like to know some most common required skills and tools for the occupations, particularly in Australia.</p>
+      <p>I hence perform this analysis to answer those questions and would like to share with others the most rewarding and in-demanding skills in the Data industry.</p>
+      <p>I decided to passively gather raw data by scrapping job postings on Linkedin, clean them afterwards to suit my need, and perform my analysis using the clean data.</p>
+      <!-- <p>In this report, I will mainly focus on the analysis section. The web scraping code using Selenium and the clean dataset can be founded in the Github repository.</p> -->
+
+      <h4>Links</h4>
+      <p><a target="_blank" href="https://www.kaggle.com/datasets/datasnaek/chess">Clean Dataset</a></p>
+      <p><a target="_blank" href="https://www.kaggle.com/code/austinnguyen00/chess-openings-analysis">Notebook</a></p>
+      <p><a target="_blank" href="https://github.com/Aust1nNguyen/chess-openings-analysis">Github repository</a></p>
+    </div> 
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>2. Questions and Hypothesis </h1>
+    <div class="questions-wrapper">
+      <h3>Questions</h3>
+      <p>1. What are the most demanding skills in general?</p>
+      <p>2. Are those demanding skills correlated with each other in general?</p>
+      <p>3. What are the most crucial skills for every occupation?</p>
+      <p>4. Are there differences in the frequency of required skills for different experience levels?</p>
+      <p>5. Do the job locations influence the required skills?</p>
+    </div>
+    
+    <div class="hypothesis-wrapper">
+      <h3>Hypothesis</h3>
+      <p>1. The most demanding skill in the Data industry, in general, should be SQL, followed by Python/R and Tableau/PowerBi.</p>
+      <p>2. The correlation between programming languages (SQL, Python, and R) and data visualisation tools should be high, but not between those in the same categories.</p>
+      <p>3. SQL should be the most critical skill in all Data occupations, followed by one programming language like Python/R and one data visualisation tool like Tableau/PowerBi. For Data Analysts, in particular, Excel is an essential skill as well, while Data Engineer should require candidate knowledge in cloud services like Azure or Aws.</p>
+      <p>4. Yes, entry-level jobs may only see high frequency in skills like SQL, Python/R, Excel, and Tableau/PowerBi, while higher-level jobs may include cloud services like Azure or Snowflake.</p>
+      <p>5. No, job locations will not influence the required skills and vice versa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>3. Dataset </h1>
+    <div class="dataset-wrapper">
+      <p>I faced some difficulties doing natural language processing to get a list of skills/tools from the job descriptions.</p> 
+      <p>With my limited capability, in the end, I decided to manually make a list of skills and technologies that are widely used in Data Science.</p>
+      <p>There are a total of 31 skills and technologies attributes in the dataset. All contain binary values(0 or 1), where the value is 1 if the job requires that skill.</p>
+      <p>Here is a word cloud to represent the frequency of skills that I included in all job descriptions in the dataset</p>
+      <img class="chart cloud" src="{% static 'images/data_skills_charts/word_cloud.png' %}">
+      <div class="data-skill-list-wrapper">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>4. Data Analysis</h1>
+
+    <div class="analysis-part-wrapper">
+      <h3>Most Demanding Skills in General</h3> 
+      <h5><u>Question 1:</u> What are the most demanding skills in general?</h5>
+      <p>First, let's look at the skill requirements in general in Australia </p>
+      <img class="chart" src="{% static 'images/data_skills_charts/skills_freq_general.png' %}">
+      <p>The most demanding skill is SQL, followed by Python; both are programming languages.</p>
+      <p>Other common are cloud services like Aws and Azure, and Spark, a data processing service.</p>
+      <p>Data visualisation tools - Tableau, PowerBi, and spreadsheet skill - Excel - are also covered in a portion of data jobs.</p>
+    </div>
+
+    <div class="analysis-part-wrapper">
+      <h3>Demanding Skills Correlation</h3> 
+      <h5><u>Question 2:</u> Are those demanding skills correlated with each other in general?</h5>
+      <p>I will continue examining whether high-demanding skills are correlated. I will only take in those that account for more than 5% of all data jobs in the above bar chart of question 1.</p>
+      <img class="chart" src="{% static 'images/data_skills_charts/skills_correlation.png' %}">
+      <p>The correlation of programming languages among each other is significantly higher than the correlation between programming languages and data visualisation tools, mostly because employers require their candidates to know at least one programming language or more in their job descriptions.</p>
+      <p>The same phenomenon happens for cloud services where Aws, Azure, and Snowflake are highly correlated.</p>
+      <p>Spark, a large-scale data processing tool in Data Engineer and Data Science, is highly correlated with programming languages Scala, Java, and Python and also significantly connected to Aws.</p>
+      <p>Data visualisation tools like Tableau and PowerBi, while correlated to one another to some extent, are not that commonly required with Python, but rather SQL and R in the case of Tableau.</p>
+    </div>
+
+    <div class="analysis-part-wrapper">
+      <h3>Demanding Skills by Occupations</h3> 
+      <h5><u>Question 3:</u> What are most crucial skills for every occupation?</h5>
+      <p>Let's continue by looking in more detail at the required skills for Data occupations - Data Analyst, Data Engineer, and Data Scientist</p>
+      <img class="chart" src="{% static 'images/data_skills_charts/skills_freq_by_job.png' %}">
+      <p>SQL is highly required among all occupations, making up more than 65% of every single one.</p>
+      <p>For Data Analysts, Python, Excel, Tableau and R are the next required skills.</p>
+      <p>Data Engineer should possess good knowledge of cloud services(Aws, Azure, Snowflake) and programming languages(Python, Scala, Java) used in the processing pipeline.</p>
+      <p>Most Data Scientist jobs require candidates to use two programming languages, Python and R.</p>
+    </div>
+
+    <div class="analysis-part-wrapper">
+      <h3>Demanding Skills by Levels</h3> 
+      <h5><u>Question 4:</u> Are there differences in frequency of required skills for different experience levels?</h5>
+      <p>Let's look at the distribution of demanding skills by different seniority levels in the Data industry, including Entry level, Associate, and Mid-senior level.</p>
+      <img class="chart" src="{% static 'images/data_skills_charts/skills_freq_by_level.png' %}">
+      <p>SQL and Python are highly and equally required at all seniority levels.</p>
+      <p>At Mid-Senior level positions, it is more common to expect candidates to possess knowledge in services like Aws, Azure, Spark, and Snowflake while the requirements at entry level and associate level are dramatically lower</p>
+      <p>Tableau is also more demanding at the Associate and Mid-Senior levels.</p>
+    </div>
+
+    <div class="analysis-part-wrapper">
+      <h3>Demanding Skills by State</h3> 
+      <h5><u>Question 5:</u> Do the job locations influence the required skills?</h5>
+      <p>I will end the analysis section with the demanding skills frequency in different states in Australia. I will only include six states in this analysis, and their proportion can be seen in the following pie chart</p>
+      <img class="chart pie" src="{% static 'images/data_skills_charts/ratio_jobs_by_state.png' %}">
+      <p>New South Wales and Victoria account for approximately 80% of data jobs in Australia, and it should mostly be based in Sydney and Melbourne, two megacities of Australia.</p>
+      <p>Now let's see the skills dependency in every state and see whether the job locations have an influence on the required skills</p>
+      <img class="chart" src="{% static 'images/data_skills_charts/skills_by_state_tableau.png' %}">
+      <p>There are no patterns in the influence of job locations on the candidate's required skills.</p>
+      <p>Both New South Wales and Victoria have nearly the same high-demanding skills and services distribution.</p>
+      <p>In Western Australia, Azure is the most required skill, which we could imply from previous parts of this analysis is that a high proportion of data jobs in this state should be Data Engineer.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="s2">
+  <div class="main-container">
+    <h1>5. Conclusion </h1>
+    <div class="conclusion-wrapper">
+      <p>To wrap up, I will summarise the skills for graduate students who are in the same boat as me to focus on in their early careers.</p>
+      <p><b>SQL</b> is a must for every occupation, and it should be the priority skill to learn by every Data student.</p>
+      <p><b>Python</b> is the programming language you should pick up  in general as it can be used in many applications among different occupations and tasks, while if you pursue a Data Scientist career, you can also learn <b>R</b> as well.</p>
+      <p>If you want to be a Data Analyst, it is good to work on your <b>Excel</b> and <b>Tableau</b> skills</p>
+      <p>Finally, for Data Engineer jobs, it is highly reward to possess knowledge of cloud services like <b>Aws</b> ,<b>Azure</b>, and <b>Snowflake</b> as well as <b>Spark</b> engine for data processing.</p>
+      <br>
+      <p>Thanks for reading.</p>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock content %}

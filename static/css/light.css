@@ -1,6 +1,6 @@
 :root{
-  --main-color: #e1e1e1;
-  --secondary-color: #fff;
+  --main-color: #fff;
+  --secondary-color: #f8f8f8;
   
   --border-color: #c1c1c1;
 
@@ -13,5 +13,5 @@
   --resume-hover: rgba(230, 230, 230, 0.9);
 
   --button-color:black;
-  --link-color: rgb(88, 201, 230);
+  --link-color: rgb(25, 118, 210);
 }

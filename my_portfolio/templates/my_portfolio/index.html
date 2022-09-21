@@ -10,7 +10,7 @@
       <div class="intro-wrapper">
         <div class="left-column">
           <div class="greeting-wrapper">
-            <h1>Hi. I'm Austin!</h1>
+            <h1>Austin Nguyen</h1>
           </div>
           
           <div class="preview-wrapper">
@@ -25,31 +25,21 @@
         
         <div class="right-column">
           <img id="profile_pic" src="{% static 'images/austin.jpg' %}">
-
-          <h5 style="text-align: center; line-height: 0; padding-top: 20px;">Choose Theme Mode</h5>
-          <div id="theme-options-wrapper">
-            <div data-mode="light" id="light-mode" class="theme-dot"></div>
-            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-            <!-- <div data-mode="green" id="green-mode" class="theme-dot"></div>
-            <div data-mode="purple" id="purple-mode" class="theme-dot"></div> -->
-          </div>
-
-          <p id="settings-note">* Theme settings will be save for next visit</p>
         </div>
       </div>
   </div>
 </section>
 
-<section id="about" class="s2">
+<section id="about" class="s1">
   <div class="main-container reveal">
     <div class="about-wrapper">
       <h1>ABOUT ME</h1>
       
       <p>I majored in Computer Science and completed my course in 2021. I spent most of my time in my sophomore year and the first half of 2022 learning, practising my pen-testing skills and competing in hacking events.</p>
 
-      <p>However, my passion for Machine Learning and its unlimited potential has driven me to a new field of Data Science in the middle of 2022. I have enjoyed everything I have learned ever since and wish to improve my skills further.</p>
+      <p>However, my passion for Machine Learning, in particular Game AI, and its unlimited potential has driven me to a new field of Data Science in the middle of 2022. I have enjoyed everything I have learned ever since and wish to improve my skills further.</p>
 
-      <p>At the time, I am looking for opportunities to work in the Data Science field as a Data Analyst/Data Engineer to gain valuable experience.</p>
+      <p>At the time, I am looking for opportunities to work in the Data Science field as a Graduate Data Analyst/Data Engineer/Data Scientist to gain valuable experience.</p>
     
     </div>
   </div>
@@ -103,7 +93,7 @@
     </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container reveal">
     
     <div id="pentest-skills">
@@ -136,7 +126,7 @@
         </div>
       </div>
 
-      <hr style="height:1px;border-width:0;background-color:#164D56">
+      <hr style="height:1px;border-width:0;background-color:var(--border-color)">
 
       <div class="pentest-badges-wrapper">
         <div class="pentest-badge">
@@ -156,30 +146,46 @@
   </div>
 </section>
       
-<section id="portfolio" class="s1">
+<section id="project" class="s1">
   <div class="main-container reveal">
-    <h1>PORTFOLIO</h1>
+    <h1>Projects</h1>
     
-    <div class="portfolio-wrapper">
+    <div class="project-wrapper">
 
-      <div class="portfolio">
-        <img class="thumbnail" src="{% static 'images/chess.jpg' %}">
-        <div class="portfolio-preview">
-          <h6 class="portfolio-title">Chess Openings Analysis</h6>
-          <p class="portfolio-intro">Examine win rates of different openings at different levels in rapid time format, find the highest win rate openings, and see their associated popularity.</p>
-          <a target="_blank" href="chess_opening.html">Read more</a>
+      <div class="project">
+        <div class="project-skills-wrapper">
+          <img src="{% static 'images/icons/tableau.png' %}">
+          <img src="{% static 'images/icons/python.png' %}">
+          <img src="{% static 'images/icons/selenium.png' %}">
+          <img src="{% static 'images/icons/pandas.png' %}">
+          <img src="{% static 'images/icons/matplotlib.png' %}">
+          <img src="{% static 'images/icons/seaborn.png' %}">
         </div>
+        <!-- <img class="thumbnail" src="{% static 'images/thumbnails/chess.jpg' %}"> -->
+        <div class="project-preview">
+          <h6 class="project-title">In-Demand Data Skills</h6>
+          <p class="project-intro">An anlysis of common required skills for data occupations - Data Analyst, Data Engineer, and Data Scientist - in Australia in 2022</p>
+          <p class="project-intro">Data source are scrapped using Python Selenium and cleansed afterward</p>
+          <p class="project-intro">Analytics dashboard is built with Tableau Public </p>
+        </div>
+        <a class="project-link" target="_blank" href="data_skills.html">Read more</a>
       </div>
 
-      <!-- <div class="portfolio">
-        <img class="thumbnail" src="{% static 'images/chess.jpg' %}">
-        <div class="portfolio-preview">
-          <h6 class="portfolio-title">portfolio Title</h6>
-          <p class="portfolio-intro">This is a sentence.</p>
-          <a target="_blank" href="portfolio.html">Read more</a>
+      <div class="project">
+        <div class="project-skills-wrapper">
+          <img src="{% static 'images/icons/python.png' %}">
+          <img src="{% static 'images/icons/pandas.png' %}">
+          <img src="{% static 'images/icons/matplotlib.png' %}">
+          <img src="{% static 'images/icons/seaborn.png' %}">
         </div>
+        <!-- <img class="thumbnail" src="{% static 'images/thumbnails/chess.jpg' %}"> -->
+        <div class="project-preview">
+          <h6 class="project-title">Chess Openings Analysis</h6>
+          <p class="project-intro">Examine win rates of different openings at different levels in rapid time format, find the highest win rate openings, and see their associated popularity.</p>
+          <p class="project-intro"></p>
+        </div>
+        <a class="project-link" target="_blank" href="chess_opening.html">Read more</a>
       </div>
-       -->
 
     </div>
   </div>

@@ -13,7 +13,7 @@
   <h1 style="font-size:60px">♔ Chess Openings Analysis ♕</h1>
 </div>
 
-<section class="s2" style="border-top: 0;">
+<section class="s1" style="border-top: 0;">
   <div class="main-container">
     <h1>1. Intro </h1>
     <div class="chess-intro-wrapper">
@@ -34,7 +34,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>2. Data Pre-Processing </h1>
     <div class="data-wrapper">
@@ -68,7 +68,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>3. Rapid Game Analysis</h1>
 
@@ -77,7 +77,7 @@
 
       <div class="analysis-part-wrapper">
         <p>First, let's look at the win rate in all rapid chess games </p>
-        <img class="chart" src="{% static 'images/charts/pie_general_win_rate.png' %}">
+        <img class="chart pie" src="{% static 'images/charts/pie_general_win_rate.png' %}">
         <div class="insight">
           <h4 style="font-weight:bold">💡 Insights</h4>
           <p>1. White win rate at all levels in rapid time format is around 50% and is nearly 4% higher than the black win rate
@@ -188,7 +188,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>4. Intermediate Rapid Game Analysis</h1>
     <div class="note">
@@ -202,7 +202,7 @@
 
       <div class="analysis-part-wrapper">
         <p>First, let's graph a pie chart to see the win rate at the intermediate level for rapid chess </p>
-        <img class="chart" src="{% static 'images/charts/pie_intermediate_win_rate.png' %}">
+        <img class="chart pie" src="{% static 'images/charts/pie_intermediate_win_rate.png' %}">
         <div class="insight">
           <h4 style="font-weight:bold">💡 Insights</h4>
           <p>1. White win rate in rapid time format at the Intermediate level is around 49%, 1% lower than all levels.
@@ -315,7 +315,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>5. Openings Recommendation</h1>
     <p>I will categorize this based on the last move in the opening is played by white or black</p>
@@ -336,6 +336,8 @@
       <p>3. Against 1.d4, black can play the Indian game(1.Nf6) which is quite popular at the intermediate level with a decent win rate for black as well </p>
     </div>
 
+    <br>
+    <p>Thanks for reading.</p>
   </div>
 </section>
 
