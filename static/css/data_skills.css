@@ -29,8 +29,10 @@ img{
   width: 80%;
 }
 
-.analysis-wrapper h2{
-  margin: 0
+.links a:hover{
+  font-size: 20px;
+  font-size-adjust: 0.5;
+  transition: 0.2s all ease-in-out ;
 }
 
 .analysis-part-wrapper{

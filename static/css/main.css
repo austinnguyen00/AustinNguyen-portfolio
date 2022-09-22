@@ -41,7 +41,7 @@ p, li, span, label, input, text, a, textarea {
 
 .reveal{
   position: relative;
-  transform: translateY(100px);
+  transform: translateY(120px);
   opacity: 0;
   transition: 1s all ease;
 }
@@ -91,7 +91,7 @@ h6 { font-size: 16px;}
   top: 0;
   left: 0;
   height: 100%;
-  width: 15%;
+  width: 20%;
   background-color: var(--secondary-color);
 }
 
@@ -104,6 +104,7 @@ h6 { font-size: 16px;}
 .sidebar-wrapper a:hover{
   font-size: 26px;
   font-size-adjust: 0.5;
+  transition: 0.2s all ease-in-out ;
 }
 
 .sidebar-name-wrapper h2:hover{
@@ -121,7 +122,7 @@ h6 { font-size: 16px;}
 }
 
 .sidebar-wrapper li{
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 .sidebar-links{
