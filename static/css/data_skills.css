@@ -1,26 +1,4 @@
-:root{
-  --main-color: #ffffff;
-  --secondary-color: #fff;
-  
-  --border-color: #c1c1c1;
 
-  --main-text:black;
-  --secondary-text: #4b5156;
-
-  --theme-dot-border:#24292e;
-
-  --preview-bg:rgb(251, 249, 243, 0.8);
-  --resume-hover: rgba(230, 230, 230, 0.9);
-
-  --button-color:black;
-  --link-color: rgb(25, 118, 210);
-
-  --insight-bg-color:#c3e8f3;
-  --fact-bg-color:#c8f9c8;
-  --note-bg-color:#f4f4cb;
-
-  --box-text-color:#d32222;
-}
 p, li, span, label, input, text, .main-container a, textarea{
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif
 }
@@ -33,14 +11,6 @@ h1{
 
 h3{
   padding-top: 30px;
-}
-
-hr{
-  width:80%; 
-  border: 1px solid var(--border-color);
-  color: var(--border-color);
-  size: 0px;
-  margin: 0 auto;
 }
 
 img{
@@ -56,12 +26,7 @@ img{
 }
 
 .main-container{
-  width: 65%;
-}
-
-.chess-intro-wrapper h4{
-  margin: 0px;
-  padding-top: 10px;
+  width: 80%;
 }
 
 .analysis-wrapper h2{
@@ -70,46 +35,4 @@ img{
 
 .analysis-part-wrapper{
   margin: 0;
-}
-
-.charts-wrapper{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  justify-content: center;
-  gap: 10px;
-}
-
-.recommendation-wrapper h2{
-  display: block;
-  margin: 0 auto;
-  background-color: var(--preview-bg);
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-  margin-top: 40px;
-}
-
-
-.insight{
-  background-color: var(--insight-bg-color);
-  margin: 30px auto;
-  padding: 20px;
-}
-
-.fact{
-  background-color: var(--fact-bg-color);
-  margin: 30px auto;
-  padding: 20px;
-}
-
-.note{
-  background-color: var(--note-bg-color);
-  margin: 30px auto;
-  padding: 20px;
-}
-
-.insight p, .insight h4, .fact p, .fact h4, .note p, .note h4, .note li{
-  color:var(--box-text-color);
-  margin: 0;
-  padding-top: 10px;
 }

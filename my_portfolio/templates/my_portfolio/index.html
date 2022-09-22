@@ -5,28 +5,27 @@
 
 {% block content %}
 <section class="s1">
-  <div class="main-container reveal">
-
-      <div class="intro-wrapper">
-        <div class="left-column">
-          <div class="greeting-wrapper">
-            <h1>Austin Nguyen</h1>
-          </div>
-          
-          <div class="preview-wrapper">
-            <div id="preview">
-              <h3>Who Am I</h3>
-              <p>I am a graduate student from The University of Western Australia.</p>
-              <p>I love coding, analyzing data, and hacking the planet.</p>
-            </div>
-          </div>
-        
-        </div>
-        
-        <div class="right-column">
-          <img id="profile_pic" src="{% static 'images/austin.jpg' %}">
-        </div>
+  <div class="intro-container reveal">
+    <div class="intro-wrapper">
+      <div class="left-column">
+        <img id="profile_pic" src="{% static 'images/austin.jpg' %}">
       </div>
+      
+      <div class="right-column">
+        <div class="greeting-wrapper">
+          <h1>Austin Nguyen</h1>
+        </div>
+        
+        <div class="preview-wrapper">
+          <div id="preview">
+            <h3>Who Am I</h3>
+            <p>I am a graduate student from The University of Western Australia.</p>
+            <p>I love coding, analyzing data, and hacking the planet.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -163,12 +162,12 @@
         </div>
         <!-- <img class="thumbnail" src="{% static 'images/thumbnails/chess.jpg' %}"> -->
         <div class="project-preview">
-          <h6 class="project-title">In-Demand Data Skills</h6>
-          <p class="project-intro">An anlysis of common required skills for data occupations - Data Analyst, Data Engineer, and Data Scientist - in Australia in 2022</p>
-          <p class="project-intro">Data source are scrapped using Python Selenium and cleansed afterward</p>
-          <p class="project-intro">Analytics dashboard is built with Tableau Public </p>
+          <h6 class="project-title">AusDask</h6>
+          <p class="project-intro">An analysis of commonly required skills for data occupations - Data Analyst, Data Engineer, and Data Scientist - in Australia in 2022</p>
+          <p class="project-intro">The data source is scrapped using Python Selenium and cleansed afterwards</p>
+          <p class="project-intro">The analytics dashboard is built with Tableau Public</p>
         </div>
-        <a class="project-link" target="_blank" href="data_skills.html">Read more</a>
+        <a class="project-link" target="_blank" href="data_skills.html">Analysis</a>
       </div>
 
       <div class="project">
@@ -180,11 +179,10 @@
         </div>
         <!-- <img class="thumbnail" src="{% static 'images/thumbnails/chess.jpg' %}"> -->
         <div class="project-preview">
-          <h6 class="project-title">Chess Openings Analysis</h6>
-          <p class="project-intro">Examine win rates of different openings at different levels in rapid time format, find the highest win rate openings, and see their associated popularity.</p>
-          <p class="project-intro"></p>
+          <h6 class="project-title">Chopen</h6>
+          <p class="project-intro">An exploratory data analysis (EDA) of different chess openings at different levels in rapid time format, find the highest win rate openings, and see their associated popularity.</p>
         </div>
-        <a class="project-link" target="_blank" href="chess_opening.html">Read more</a>
+        <a class="project-link" target="_blank" href="chess_opening.html">Analysis</a>
       </div>
 
     </div>

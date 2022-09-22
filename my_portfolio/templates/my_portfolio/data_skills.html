@@ -1,7 +1,7 @@
 {% extends "my_portfolio/base.html" %}
 {% load static %}
 
-{% block title %}In-Demand Data Skills{% endblock %}
+{% block title %}AusDask{% endblock %}
 
 {% block extra_head %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/data_skills.css' %}">
@@ -10,19 +10,22 @@
 
 {% block content %}
 
-<div class="title-wrapper">
-  <h1 style="font-size:60px">In-demand Data Skills</h1>
-</div>
+<section class="s1">
+  <div class="title-wrapper">
+    <h1 style="font-size:60px">AusDask</h1>
+  </div>
+</section>
 
-<section class="s2" style="border-top: 0;">
+
+<section class="s1 border" style="border-top: 0;">
   <div class="main-container">
     <h1>1. Intro </h1>
     <div class="chess-intro-wrapper">
       <h4>Objectives</h4>
       <p>As a graduate student seeking more career opportunities in Data Science, I would like to know some most common required skills and tools for the occupations, particularly in Australia.</p>
       <p>I hence perform this analysis to answer those questions and would like to share with others the most rewarding and in-demanding skills in the Data industry.</p>
-      <p>I decided to passively gather raw data by scrapping job postings on Linkedin, clean them afterwards to suit my need, and perform my analysis using the clean data.</p>
-      <!-- <p>In this report, I will mainly focus on the analysis section. The web scraping code using Selenium and the clean dataset can be founded in the Github repository.</p> -->
+      <p>I decided to passively gather raw data by scrapping job postings on Linkedin, cleaning them afterwards to suit my need, and performing my analysis using the clean data.</p>
+      <p>In this report, I will mainly focus on the analysis section. The web scraping code using Selenium and the clean dataset can be founded in the GitHub repository.</p>
 
       <h4>Links</h4>
       <p><a target="_blank" href="https://www.kaggle.com/datasets/datasnaek/chess">Clean Dataset</a></p>
@@ -32,7 +35,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>2. Questions and Hypothesis </h1>
     <div class="questions-wrapper">
@@ -55,7 +58,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>3. Dataset </h1>
     <div class="dataset-wrapper">
@@ -70,7 +73,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>4. Data Analysis</h1>
 
@@ -132,7 +135,7 @@
   </div>
 </section>
 
-<section class="s2">
+<section class="s1">
   <div class="main-container">
     <h1>5. Conclusion </h1>
     <div class="conclusion-wrapper">

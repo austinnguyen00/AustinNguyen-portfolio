@@ -1,20 +1,4 @@
 :root{
-  --main-color: #ffffff;
-  --secondary-color: #fff;
-  
-  --border-color: #c1c1c1;
-
-  --main-text:black;
-  --secondary-text: #4b5156;
-
-  --theme-dot-border:#24292e;
-
-  --preview-bg:rgb(251, 249, 243, 0.8);
-  --resume-hover: rgba(230, 230, 230, 0.9);
-
-  --button-color:black;
-  --link-color: rgb(25, 118, 210);
-
   --insight-bg-color:#c3e8f3;
   --fact-bg-color:#c8f9c8;
   --note-bg-color:#f4f4cb;
@@ -25,10 +9,9 @@ p, li, span, label, input, text, .main-container a, textarea{
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif
 }
 
-h1, h2, h3{
+h1, section h2, h3{
   text-align: center;
 }
-
 
 hr{
   width:80%; 
@@ -52,16 +35,12 @@ img{
 }
 
 .main-container{
-  width: 65%;
+  width: 80%;
 }
 
 .chess-intro-wrapper h4{
   margin: 0px;
   padding-top: 10px;
-}
-
-.data-wrapper{
-
 }
 
 .analysis-wrapper h2{

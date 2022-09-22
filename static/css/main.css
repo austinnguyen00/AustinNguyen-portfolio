@@ -21,6 +21,7 @@ html, body{
   margin: 0;
   background-color:var(--main-color)!important;
   line-height: 1.75;
+  height: 100%;
 }
 
 html, body *{
@@ -82,32 +83,59 @@ h6 { font-size: 16px;}
   /* overflow:auto; */
 }
 
-.sidebar{
+.sidebar-wrapper{
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  align-items: top;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 15%;
   background-color: var(--secondary-color);
-  border-right: 1px solid var(--border-color);
 }
 
-.sidebar{
-  margin: 0;  
-  padding-left: 20px;
+.sidebar-name-wrapper{
+  display: grid;
+  align-items: top;
+  padding-left: 30px;
 }
 
-.sidebar ul{
+.sidebar-wrapper a:hover{
+  font-size: 26px;
+  font-size-adjust: 0.5;
+}
+
+.sidebar-name-wrapper h2:hover{
+  font-size: 38px;
+  font-size-adjust: 0.5;
+  transition: 0.2s all ease-in-out ;
+}
+
+.sidebar-wrapper ul{
+  display: grid;
+  grid-template-rows: repeat( auto-fit, minmax(30px, 4em));
   margin: 0;
-  padding: 0
+  padding: 0;
+  padding-top: 15%;
 }
 
-.sidebar li{
+.sidebar-wrapper li{
+  padding-bottom: 1.5em;
+}
+
+.sidebar-links{
+  display: grid;
+  justify-content: left; 
   position: relative;
   margin: 0;
-  height: 0;
-  width: 100%;
-  padding-bottom: 30px;
+  height: 3em;
+  font-size: 24px;
+  color: var(--main-text);
+  font-family: 'League Spartan', sans-serif;
+  padding-left: 30px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .theme-mode{
@@ -185,13 +213,20 @@ h6 { font-size: 16px;}
   padding-bottom: 40px;
 }
 
+.intro-container{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
 .intro-wrapper{
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 3fr;
   grid-template-areas: 
     'left-column right-column'
   ;
-  
+
   /* border: 1px solid var(--border-color);
   border-radius: 5px 5px 0 0; */
 
@@ -200,19 +235,27 @@ h6 { font-size: 16px;}
 }
 
 .left-column{
-  grid-area: left-column;
+  display: grid;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.right-column{
+  grid-area: right-column;
   padding-bottom: 50px;
 }
 
 .greeting-wrapper{
   display: grid;
-  justify-content: center;
+  justify-content: center; 
   align-content: center;
   min-height: 10em;
 }
 
 .greeting-wrapper h1{
-  font-size: 80px;
+  font-size: 72px;
+  display: block;
+  margin: 0 auto;
 }
 
 .preview-wrapper{
@@ -224,7 +267,7 @@ h6 { font-size: 16px;}
 }
 
 #preview{
-  width: 550px;
+  width: 50%px;
   border: 2px solid var(--border-color);
   background-color: var(--preview-bg);
   padding: 15px;
@@ -489,8 +532,8 @@ h6 { font-size: 16px;}
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px){
-  .sidebar{
+@media screen and (max-width: 1025px){
+  .sidebar-wrapper{
     display:none;
   }
   
