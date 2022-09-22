@@ -1,17 +1,18 @@
 :root{
-	--main-color:#606B56;
-	--secondary-color:#515a48;
+	--main-color:#587AAC;
+	--secondary-color:#83A0C3;
 
-	--border-color:#161914;
+	--border-color:#708DB4;
+	--header-border-color: #57584c;
 
 	--main-text:#fff;
 	--secondary-text:#eeeeee;
 
 	--theme-dot-border:#FFF;
 
-	--preview-bg:rgb(81, 90, 72, 0.8);
-	--preview-shadow:#2a2f25;
+	--preview-bg:#C5B9B3;
+	--resume-hover: #2c4c6a;
 
-
-	--button-color:#669966;
+	--button-color: #57584C;
+	--link-color: rgb(25, 118, 210);
 }

@@ -3,6 +3,7 @@
 	--secondary-color:#15283a;
 
 	--border-color:#164D56;
+	--header-border-color: #6ca369;
 
 	--main-text:#fff;
 	--secondary-text:#eeeeee;
@@ -71,16 +72,38 @@ h6 { font-size: 16px;}
 
 .s1{
   background-color: var(--main-color);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  /* border-top: 1px solid var(--border-color); */
+  /* border-bottom: 1px solid var(--border-color); */
   /* overflow:auto; */
 }
 
 .s2{
   background-color: var(--secondary-color);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px var(--border-color);
+  /* border-top: 1px solid var(--border-color); */
+  /* border-bottom: 1px var(--border-color); */
   /* overflow:auto; */
+}
+
+#light-mode{
+  background-color: #fff;
+}
+
+#blue-mode{
+	background-color: #192734;
+}
+
+#green-mode{
+	background-color: #78866b;
+}
+
+#purple-mode{
+	background-color: #7E4C74;
+}
+
+#settings-note{
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
 }
 
 .sidebar-wrapper{
@@ -276,7 +299,6 @@ h6 { font-size: 16px;}
   text-align: center;
 }
 
-
 #profile_pic{
   display: block;
   margin: 0 auto;
@@ -288,29 +310,6 @@ h6 { font-size: 16px;}
   border-radius: 50%;
 }
 
-
-#light-mode{
-  background-color: #fff;
-}
-
-#blue-mode{
-	background-color: #192734;
-}
-
-#green-mode{
-	background-color: #78866b;
-}
-
-#purple-mode{
-	background-color: #7E4C74;
-}
-
-#settings-note{
-  font-size: 12px;
-  font-style: italic;
-  text-align: center;
-}
-
 .right-column{
   grid-area: right-column;
   display: grid;
@@ -320,12 +319,38 @@ h6 { font-size: 16px;}
   padding-bottom: 50px
 }
 
-.about-wrapper{
-  display: grid;
+.header-wrapper{
+  width: fit-content;
 }
 
-#data-skills h3, #pentest-skills h3{
-  text-decoration: underline;
+.header-wrapper h1, .header-wrapper h3{
+  position: relative;
+}
+
+.header-wrapper h1::after{
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 0;
+  border-radius: 1%;
+  width: 70%;
+  border-bottom: 3px solid var(--header-border-color);
+}
+
+.header-wrapper h3::after{
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  height: 0;
+  border-radius: 1%;
+  width: 60%;
+  border-bottom: 2px solid var(--header-border-color);
+}
+
+.about-wrapper{
+  display: grid;
 }
 
 .data-skills-wrapper, .pentest-skills-wrapper{
@@ -451,7 +476,7 @@ h6 { font-size: 16px;}
 
 .project-intro{
   margin: 0;
-  font-size: 14px;
+  /* font-size: 18px; */
 }
 
 .project-link{
@@ -459,9 +484,10 @@ h6 { font-size: 16px;}
   justify-content: left;
   width: 90%;
   padding-bottom: 20px;
+  margin: 0;
 }
 
-.project-link:hover{
+.project-link a:hover{
   font-size: 20px;
   font-size-adjust: 0.5;
   transition: 0.2s all ease-in-out;
@@ -551,7 +577,7 @@ h6 { font-size: 16px;}
   }
 
   .page-content{
-    left:0;
+    left: 0;
   }
 
   .nav-wrapper a:hover{

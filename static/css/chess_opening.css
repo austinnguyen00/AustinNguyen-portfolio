@@ -9,16 +9,14 @@ p, li, span, label, input, text, .main-container a, textarea{
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif
 }
 
-h1, section h2, h3{
+h1, section h2{
   text-align: center;
+  margin: 0;
+  padding-top: 20px;
 }
 
-hr{
-  width:80%; 
-  border: 1px solid var(--border-color);
-  color: var(--border-color);
-  size: 0px;
-  margin: 0 auto;
+h3{
+  padding-top: 30px;
 }
 
 img{
@@ -26,9 +24,9 @@ img{
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* align-items: center; */
-  width: 100%;
+  width: 80%;
 }
+
 
 .pie{
   width: 50%;
