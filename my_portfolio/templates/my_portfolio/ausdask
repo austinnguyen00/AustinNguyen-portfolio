@@ -31,7 +31,7 @@
       <h4>Links</h4>
       <div class="links">
         <p><a target="_blank" href="https://github.com/austinnguyen00/AusDask">Github Repository</a></p>
-        <p><a target="_blank" href="https://public.tableau.com/views/SkillsforDataJobs/DataJobsinAustralia?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau Dashboard</a></p>
+        <p><a target="_blank" href="https://public.tableau.com/app/profile/austin.nguyen/viz/SkillsforDataJobs/DataJobsinAustralia">Tableau Dashboard</a></p>
         <p><a target="_blank" href="https://github.com/austinnguyen00/AusDask/blob/main/analysis.ipynb">Notebook</a></p>
         <p><a target="_blank" href="https://github.com/austinnguyen00/AusDask/blob/main/scrap.py">Scraping Code</a></p>
         <p><a target="_blank" href="https://github.com/austinnguyen00/AusDask/blob/main/output/data/Data_jobs_Australia.xlsx">Download Dataset</a></p>
