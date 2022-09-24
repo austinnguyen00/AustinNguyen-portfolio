@@ -480,11 +480,16 @@ h6 { font-size: 16px;}
 }
 
 .project-link{
-  display: block;
-  justify-content: left;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, 200px);
+  gap: 20px;
   width: 90%;
   padding-bottom: 20px;
   margin: 0;
+}
+
+.project-link a{
+  font-style: italic;
 }
 
 .project-link a:hover{
