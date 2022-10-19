@@ -1,0 +1,14 @@
+{% extends "my_portfolio/base.html" %}
+{% load static %}
+
+{% block title %}AusDask{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/data_skills.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<h1>Recotify</h1>
+
+{% endblock content %}

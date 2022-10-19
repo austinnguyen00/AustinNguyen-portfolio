@@ -114,7 +114,7 @@ h6 { font-size: 16px;}
   top: 0;
   left: 0;
   height: 100%;
-  width: 20%;
+  width: 200px;
   background-color: var(--secondary-color);
 }
 
@@ -233,8 +233,8 @@ h6 { font-size: 16px;}
 .page-content{
   position: absolute;
   height: 100px;
-  width: calc(100% -15%);
-  left: 15%;
+  width: calc(100% - 200px);
+  left: 200px;
 }
 
 .main-container{
@@ -278,6 +278,7 @@ h6 { font-size: 16px;}
 
 .greeting-wrapper{
   display: grid;
+  width: 100%;
   justify-content: center; 
   align-content: center;
   min-height: 10em;
@@ -296,6 +297,14 @@ h6 { font-size: 16px;}
   margin: 0;
   padding-left: 1em;
 }
+
+.preview-wrapper span, .preview-wrapper p{
+  font-size: 24px;
+}
+
+.preview-typewritter{
+  color: var(--main-color)
+} 
 
 #preview{
   width: 50%px;
@@ -356,8 +365,8 @@ h6 { font-size: 16px;}
   border-bottom: 2px solid var(--header-border-color);
 }
 
-.about-wrapper{
-  display: grid;
+.about-wrapper p{
+  line-height: 1.5em;
 }
 
 .data-skills-wrapper, .pentest-skills-wrapper{
@@ -571,7 +580,26 @@ h6 { font-size: 16px;}
   cursor: pointer;
 }
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1200px){
+  .greeting-wrapper h1{
+    font-size: 48px;
+  }
+  #profile_pic{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .page-content{
+    width: 100%
+  }
+  .intro-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
   .sidebar-wrapper{
     display:none;
   }

@@ -12,3 +12,6 @@ def chopen(request):
 
 def ausdask(request):
   return render(request=request, template_name='my_portfolio/ausdask')
+
+def recotify(request):
+  return render(request=request, template_name='my_portfolio/recotify')
