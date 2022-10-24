@@ -1,14 +1,55 @@
 {% extends "my_portfolio/base.html" %}
 {% load static %}
 
-{% block title %}AusDask{% endblock %}
+{% block title %}Recotify{% endblock %}
 
 {% block extra_head %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/data_skills.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/recotify.css' %}">
 {% endblock %}
 
 
 {% block content %}
-<h1>Recotify</h1>
+<div class="main-container">
+  <img src="{% static 'images/recotify/homepage.png' %}">
+
+  <h1>Recotify</h1>
+  <p>This is a personal project that I developed to enhance my technical ability to work with an external API and React framework.</p>
+  <p>Recotify is a web application finding music tracks matching user tastes by receiving the user inputs and fetching those data to the Spotify API.</p>
+  <p>The external API call are done on the backend using Django REST framework and served to the React frontend.</p>
+  <p>The production application is deployed on EC2 using Gunicorn and Nginx.</p>
+
+  <h2>Technologies</h2>
+  <ul>
+    <li>React</li>
+    <li>Django + Django REST framework</li>
+    <li>Spotify API</li>
+    <li>SQLite</li>
+    <li>AWS EC2</li>
+    <li>Gunicorn</li>
+    <li>Nginx</li>
+  </ul>
+
+  <h2>App Flow</h2>
+  <p>On every page, the user will choose from available options, which will then be displayed on the left sidebar. In the end, the recommendation page will return tracks based on these selections.</p>
+  <h3>Country</h3>
+  <img src="{% static 'images/recotify/country.png' %}">
+
+  <h3>Moods</h3>
+  <img src="{% static 'images/recotify/moods.png' %}">
+
+  <h3>Genres</h3>
+  <img src="{% static 'images/recotify/genres.png' %}">
+
+  <h3>Artists</h3>
+  <img src="{% static 'images/recotify/artists.png' %}">
+
+  <h3>Tracks</h3>
+  <img src="{% static 'images/recotify/tracks.png' %}">
+
+  <h3>Recommendation</h3>
+  <img src="{% static 'images/recotify/recommendation.png' %}">
+
+</div>
+
 
 {% endblock content %}

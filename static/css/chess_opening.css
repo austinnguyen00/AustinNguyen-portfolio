@@ -33,7 +33,8 @@ img{
 }
 
 .main-container{
-  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .chess-intro-wrapper h4{

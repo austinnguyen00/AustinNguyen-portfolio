@@ -7,10 +7,11 @@ var typewriter = new Typewriter(typeWriter, {
 });
 
 typewriter
+  .pauseFor(500)
   .typeString('Data Analyst')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Software Developer')
+  .typeString('Software Engineer')
   .pauseFor(1000)
   .deleteAll()
   .typeString('Penetration Tester')
