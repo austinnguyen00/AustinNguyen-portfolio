@@ -376,12 +376,13 @@ h6 { font-size: 16px;}
   display: grid;
   /* grid-template-columns: repeat( auto-fit, 320px); */
   justify-items: center;
+  text-align: center;
   /* padding-bottom: 50px; */
 }
 
 .data-skill-wrapper img, .pentest-skill-wrapper img{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   display: grid;
   /* grid-template-columns: repeat( auto-fit, 120px); */
   justify-content: center;
