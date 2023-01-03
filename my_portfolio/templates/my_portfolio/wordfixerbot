@@ -1,0 +1,55 @@
+{% extends "my_portfolio/base.html" %}
+{% load static %}
+
+{% block title %}WordfixerBot{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/recotify.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="main-container">
+  <img src="{% static 'images/wordfixerbot/wordfixerbot_homepage.png' %}">
+
+  <h1>WordfixerBot</h1>
+  <p>WordfixerBot is an AI language processing tool that can paraphrase, grammar check, summarize, and compare text.</p>
+  <p>You can check it out at <a target="_blank" href="https://www.wordfixerbot.com/">https://www.wordfixerbot.com/</a></p>
+
+  <h2>Background Stories</h2>
+  <p>
+    Hi everyone,
+  </p>
+  <p>
+    In November of 2022, I first came across OpenAI and their GPT-3 models. I was amazed and stunned by its powerful language performance, which can be applied to natural language or coding language. I thought it could be an exciting idea for me to build a simple application powered by GPT-3 as a portfolio project for my resume, so the journey with WordfixerBot begins.
+  </p>
+  <p>I build WordfixerBot as a simple AI language processing tool that can paraphrase, grammar check, and summarize texts.</p>
+  <p>Two weeks after getting started, I started showcasing the first version of this tool, mostly on Reddit, and after receiving much positive feedback, I found that it has the potential to generate revenue. So I decided to turn it into a MicroSaas product that I can build to get more experience on my journey to become an Indie Hacker.</p>
+  <p>I have faced many challenges around marketing my tool to get the first batch of initial customers. As someone who does not have a lot of marketing experience, I know that I must get my hand wets and just do it. I start with posts on Reddit on many tech subreddits and submit my product to product listing pages, and it helps me to get some feedback from early customers that I can use to improve my tool.</p>
+  <p>I am still on my journey to get better at marketing, and hopefully, I can reach my first goal revenue of $2,000 MRR in the next few months. I believe that if I work harder and smarter and believe in myself, I can achieve my goals and get more customers.</p>
+  <p>I am happy to answer any questions and would love to receive any feedback about the tool! </p>
+  <p>You can contact me by sending me an email at the footer of the page.</p>
+
+  <h2>Technologies</h2>
+  <p>Below is the tech stack that I use to build my app</p>
+  <ul>
+    <li>React: Javascript Framework </li>
+    <li>Next.js: React Framework </li>
+    <li>Javascript / Typescript: Programming Language</li>
+    <li>Sass: CSS but more powerful</li>
+    <li>Next.js API Routes: server-side API routes as backend</li>
+    <li>Supabase: PostgreSQL Database</li>
+    <li>Prisma: ORM for migrations and database access</li>
+    <li>NextAuth.js: Authentication</li>
+    <li>Stripe: Payment gateway</li>
+    <li>Vercel: Deployment platform</li>
+  </ul>
+
+  <div class="conclusion-wrapper">
+  <p>Thanks for reading this article :D.</p>
+</div>
+
+</div>
+
+
+{% endblock content %}

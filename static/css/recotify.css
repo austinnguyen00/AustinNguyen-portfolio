@@ -10,3 +10,7 @@ img {
 ul {
   list-style-type: disc;
 }
+
+.conclusion-wrapper {
+  margin-top: 5rem;
+}

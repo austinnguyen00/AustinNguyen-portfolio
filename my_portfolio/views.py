@@ -15,3 +15,6 @@ def ausdask(request):
 
 def recotify(request):
   return render(request=request, template_name='my_portfolio/recotify')
+
+def wordfixerbot(request):
+  return render(request=request, template_name='my_portfolio/wordfixerbot')

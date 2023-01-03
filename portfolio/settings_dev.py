@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 # .\venv\Scripts\activate
-# python manage.py runserver --settings=portfolio.settings_dev
+# python manage.py runserver --settings=portfolio.settings_dev 8080
 
 from pathlib import Path
 import os
