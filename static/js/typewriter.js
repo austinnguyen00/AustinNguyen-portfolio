@@ -8,16 +8,16 @@ var typewriter = new Typewriter(typeWriter, {
 
 typewriter
   .pauseFor(500)
-  .typeString('Data Analyst')
+  .typeString('Software Developer')
+  .pauseFor(1000)
+  .deleteAll().
+  typeString('building WordfixerBot')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Software Engineer')
+  .typeString('Indie Hacker')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Penetration Tester')
-  .pauseFor(1000)
-  .deleteAll()
-  .typeString('Graduate Student')
-  .pauseFor(1000)
-  .deleteAll()
+  // .typeString('Penetration Tester')
+  // .pauseFor(1000)
+  // .deleteAll()
   .start();

@@ -2,93 +2,123 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>{% block title %}{% endblock %}</title>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&family=League+Spartan:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 
-  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
 
-  <link id="theme-style" rel="stylesheet" type="text/css" href="">
-  <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}">
+		<link id="theme-style" rel="stylesheet" type="text/css" href="" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="{% static '/images/favicon.ico' %}"
+		/>
 
-  {% block extra_head %}{% endblock extra_head %}
-</head>
+		{% block extra_head %}{% endblock extra_head %}
+	</head>
 
-<body>
-  <div class="sidebar-wrapper">
-    <div class="sidebar-top-wrapper">
-      <div class="sidebar-name-wrapper">
-        <a href="/#"><h2>Austin</h2></a>
-      </div>
+	<body>
+		<div class="sidebar-wrapper">
+			<div class="sidebar-top-wrapper">
+				<div class="sidebar-name-wrapper">
+					<a href="/#"><h2>Austin</h2></a>
+				</div>
 
-      <div class="theme-options-wrapper">
-        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-        <div data-mode="light" id="light-mode" class="theme-dot"></div>
-        <!-- <div data-mode="green" id="green-mode" class="theme-dot"></div> -->
-        <!-- <div data-mode="purple" id="purple-mode" class="theme-dot"></div> -->
-      </div>
+				<div class="theme-options-wrapper">
+					<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+					<div data-mode="light" id="light-mode" class="theme-dot"></div>
+					<!-- <div data-mode="green" id="green-mode" class="theme-dot"></div> -->
+					<!-- <div data-mode="purple" id="purple-mode" class="theme-dot"></div> -->
+				</div>
+			</div>
 
-    </div>
+			<ul id="nav-list">
+				<li><a class="sidebar-links" href="/#">Home</a></li>
+				<li><a class="sidebar-links" href="/#about">About</a></li>
+				<li><a class="sidebar-links" href="/#project">Projects</a></li>
+				<li><a class="sidebar-links" href="/#skills">Skills</a></li>
+				<li><a class="sidebar-links" href="/#contact">Contact</a></li>
+			</ul>
+		</div>
 
-    <ul id="nav-list">
-      <li><a class="sidebar-links" href="/#">Home</a></li>
-      <li><a class="sidebar-links" href="/#about">About</a></li>
-      <li><a class="sidebar-links" href="/#project">Projects</a></li>
-      <li><a class="sidebar-links" href="/#skills">Skills</a></li>
-      <li><a class="sidebar-links" href="/#contact">Contact</a></li>
+		<section class="s2">
+			<div class="nav-wrapper">
+				<div class="name-wrapper">
+					<a href="/#"><h2>Austin</h2></a>
+				</div>
 
-    </ul>
-  </div>
+				<div class="theme-options-wrapper">
+					<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+					<div data-mode="light" id="light-mode" class="theme-dot"></div>
+				</div>
 
+				<ul id="navigation">
+					<li><a href="/#">Home</a></li>
+					<li><a href="/#about">About</a></li>
+					<li><a href="/#skills">Skills</a></li>
+					<li><a href="/#project">Projects</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</div>
+		</section>
 
-  <section class="s2">
-    <div class="nav-wrapper">
-      <div class="name-wrapper">
-        <a href="/#"><h2>Austin</h2></a>
-      </div>
+		<div class="page-content">
+			{% block content %} {% endblock content %}
+			<section id="contact" class="s1">
+				<div class="main-container">
+					<div class="header-wrapper">
+						<h1>Contact Me</h1>
+					</div>
+					<p>
+						Feel free to reach out to me via any social medias below, or send me
+						an email by clicking on mail icon below as well
+					</p>
 
-      <div class="theme-options-wrapper">
-        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-        <div data-mode="light" id="light-mode" class="theme-dot"></div>
-      </div>
-      
-      <ul id="navigation">
-        <li><a href="/#">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#skills">Skills</a></li>
-        <li><a href="/#project">Projects</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </div>
-  </section> 
+					<div class="social-links">
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/austinnguyen00/"
+							><img
+								src="{% static 'images/icons/linkedin.png' %}"
+								class="social_img"
+						/></a>
+						<a target="_blank" href="https://github.com/austinnguyen00"
+							><img
+								src="{% static 'images/icons/github.png' %} "
+								class="social_img"
+						/></a>
+						<a target="_blank" href="mailto:ndkhiem3010@gmail.com"
+							><img
+								src="{% static 'images/icons/mail.png' %} "
+								class="social_img"
+						/></a>
+						<a target="_blank" href="https://www.kaggle.com/austinnguyen00"
+							><img
+								src="{% static 'images/icons/kaggle.png' %} "
+								class="social_img"
+						/></a>
+						<a target="_blank" href="https://app.hackthebox.com/profile/454589"
+							><img
+								src="{% static 'images/icons/htb_icon.png' %} "
+								class="social_img"
+						/></a>
+						<a target="_blank" href="https://tryhackme.com/p/ndkhiem3010"
+							><img
+								src="{% static 'images/icons/thm_icon.png' %} "
+								class="social_img"
+						/></a>
+					</div>
 
-
-  <div class="page-content">
-    {% block content %}
-
-    {% endblock content %}
-    <section id="contact" class="s1">
-      <div class="main-container">
-        <div class="header-wrapper">
-          <h1>Contact Me</h1>
-        </div>
-        <p>Feel free to reach out to me via any social medias below, or send me an email by clicking on mail icon below as well</p>
-    
-        <div class="social-links">
-          <a target="_blank" href="https://www.linkedin.com/in/austinnguyen00/"><img src="{% static 'images/icons/linkedin.png' %}" class="social_img"></a>
-          <a target="_blank" href="https://github.com/austinnguyen00"><img src="{% static 'images/icons/github.png' %} " class="social_img"></a>
-          <a target="_blank" href="mailto:ndkhiem3010@gmail.com"><img src="{% static 'images/icons/mail.png' %} " class="social_img"></a>
-          <a target="_blank" href="https://www.kaggle.com/austinnguyen00"><img src="{% static 'images/icons/kaggle.png' %} " class="social_img"></a>
-          <a target="_blank" href="https://app.hackthebox.com/profile/454589"><img src="{% static 'images/icons/htb_icon.png' %} " class="social_img"></a>
-          <a target="_blank" href="https://tryhackme.com/p/ndkhiem3010"><img src="{% static 'images/icons/thm_icon.png' %} " class="social_img"></a>
-        </div>
-    
-        <!-- <h3 style="text-align: center;">GET IN TOUCH</h3>
+					<!-- <h3 style="text-align: center;">GET IN TOUCH</h3>
         <form id="contact-form" onsubmit="sendEmail(); reset(); return false">
     
           <label>Name</label>
@@ -105,12 +135,10 @@
     
           <input id="submit-btn" type="submit" value="Send">
         </form> -->
-    
-      </div>
-    </section>
-  </div>
-    
-  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+				</div>
+			</section>
+		</div>
 
-</body>
+		<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+	</body>
 </html>

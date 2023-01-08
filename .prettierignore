@@ -1,0 +1,2 @@
+# Ignore pages that use Jinja templates
+my_portfolio/templates/my_portfolio/wordfixerbot
