@@ -8,10 +8,10 @@ var typewriter = new Typewriter(typeWriter, {
 
 typewriter
   .pauseFor(500)
-  .typeString('Software Developer')
+  .typeString('Web Developer')
   .pauseFor(1000)
   .deleteAll().
-  typeString('building WordfixerBot')
+  typeString('Frontend Developer')
   .pauseFor(1000)
   .deleteAll()
   .typeString('Indie Hacker')
